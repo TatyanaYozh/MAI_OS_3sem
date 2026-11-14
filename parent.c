@@ -33,8 +33,8 @@ int main(void) {
     if (pipe(p2) < 0) die("pipe2");
     if (pipe(p3) < 0) die("pipe3");
 
-    pid_t c1 = spawn("./child1", p1[0], p2[1], p1, p2, p3);
-    pid_t c2 = spawn("./child2", p2[0], p3[1], p1, p2, p3);
+    pid_t c1 = spawn("./childe1", p1[0], p2[1], p1, p2, p3);
+    pid_t c2 = spawn("./childe2", p2[0], p3[1], p1, p2, p3);
 
     close(p1[0]); close(p2[0]); close(p2[1]); close(p3[1]);
     int wfd = p1[1], rfd = p3[0];
