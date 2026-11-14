@@ -1,16 +1,16 @@
 CC      = gcc
 CFLAGS  = -Wall -Wextra -O2 -std=gnu11
 
-all: parent child1 child2
+all: parent childe1 childe2
 
 parent: parent.c
 	$(CC) $(CFLAGS) -o $@ $<
 
-child1: child1.c
+childe1: childe1.c
 	$(CC) $(CFLAGS) -o $@ $<
 
-child2: child2.c
+childe2: childe2.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 clean:
-	rm -f parent child1 child2
+	rm -f parent childe1 childe2
